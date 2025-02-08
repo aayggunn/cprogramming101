@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+extern int globalVar; 
+static int staticVar = 10;
+_Thread_local int threadLocalVar = 20;
+
+_Noreturn void exit_program() {
+    printf("Program is  ending...\n");
+    exit(0);
+}
+
+int main() {
+    auto int localAutoVar = 5;
+    register int registerVar = 15;
+    globalVar = 50;
+
+    staticVar++;
+    threadLocalVar++;
+    localAutoVar++;
+    registerVar++;
+
+    printf("localAutoVar = %d\n", localAutoVar);
+    printf("registerVar = %d\n", registerVar);
+    printf("globalVar = %d\n", globalVar);
+    printf("staticVar = %d\n", staticVar);
+    printf("threadLocalVar = %d\n", threadLocalVar);
+
+    exit_program();
+
+    return 0;
+}
+int globalVar;
