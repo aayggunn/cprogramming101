@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char str1[] = "12345";
+    char str2[] = "3.14159";
+    char str3[] = "987.65";
+
+    // String to integer (atoi)
+    int num1 = atoi(str1);
+    printf("String '%s' to integer: %d\n", str1, num1);
+
+    // String to float (atof)
+    float num2 = atof(str2);
+    printf("String '%s' to float: %.2f\n", str2, num2);
+
+    // String to double (atof)
+    double num3 = atof(str3);
+    printf("String '%s' to double: %.2f\n", str3, num3);
+
+    char str4[] = "200";
+    int num4 = atoi(str4);
+    printf("String '%s' to integer: %d\n", str4, num4);
+
+    char str5[] = "abc123";
+    int num5 = atoi(str5); 
+    printf("String '%s' to integer: %d\n", str5, num5);
+
+    char str6[] = "xyz";
+    float num6 = atof(str6);
+    printf("String '%s' to float: %.2f\n", str6, num6);
+
+    return 0;
+}
