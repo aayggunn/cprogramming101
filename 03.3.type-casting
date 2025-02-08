@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    double b = 5.5;
+    
+    double result = a + b;
+
+    printf("Implicit Casting - Sonuç (int to double): %.2f\n", result);
+
+    // **Explicit Type Casting (Açık Tip Dönüşümü)**
+    float x = 7.8;
+    int y;
+
+    y = (int) x;
+    printf("Explicit Casting - Sonuç (float to int): %d\n", y);
+
+    int num1 = 300;
+    short num2;
+
+    num2 = (short) num1;
+
+    printf("Explicit Casting between integer types - Sonuç (int to short): %d\n", num2);
+
+    double largeNum = 123456.789;
+    int smallNum;
+
+    smallNum = (int) largeNum; 
+    printf("Data Loss during casting (double to int): %d\n", smallNum);
+
+    return 0;
+}
