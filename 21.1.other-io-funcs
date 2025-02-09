@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int main() {
+    char ch;
+    char str[100];
+    char buffer[100];
+
+    printf("Bir karakter girin (getchar kullanımı): ");
+    ch = getchar();  
+    printf("Girdiğiniz karakter (putchar ile yazdırıldı): ");
+    putchar(ch);
+    printf("\n");
+
+    printf("Bir karakter girin (getch - ekrana yazdırmaz): ");
+    ch = getch();  
+    printf("\nGirdiğiniz karakter: %c\n", ch);
+
+    printf("Bir karakter girin (getche - ekrana yazdırır): ");
+    ch = getche();  
+    printf("\nGirdiğiniz karakter: %c\n", ch);
+
+    printf("Bir cümle girin (gets kullanımı): ");
+    gets(str);
+    printf("Girdiğiniz cümle (puts kullanımı): ");
+    puts(str);
+
+    int num = 42;
+    sprintf(buffer, "Bu bir sayıdır: %d", num);
+    printf("sprintf kullanımı sonucu: %s\n", buffer);
+
+    return 0;
+}
