@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 void myMessage(){
 	printf("It is a function\n");
